@@ -7,9 +7,18 @@ import classes from "./Toolbar.module.css";
 const Toolbar = (props) => (
   <header className={classes.Toolbar}>
     {" "}
-    <div>MENU</div>
-    <Logo />
-    <nav>
+    <div
+      onClick={props.show}
+      className={(classes.Toggle, classes.DrawerToggle)}
+    >
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div className={classes.Logo}>
+      <Logo />
+    </div>
+    <nav className={classes.DektopOnly}>
       {" "}
       <NavigationItems />{" "}
     </nav>
